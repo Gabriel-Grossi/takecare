@@ -1,113 +1,75 @@
-import Image from "next/image";
+import { BrainCircuit, Dumbbell, Smile, Utensils } from 'lucide-react'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
+    <main className="flex min-h-screen flex-col justify-center px-12">
+      <header className="pt-4">
+        <nav className="grid gap-y-4">
+          <ul className="w-full flex justify-center">
+            <li>
+              <h1 className="font-semibold text-black text-3xl text-center">take<span className="text-purple-600">care</span></h1>
+            </li>
+          </ul>
+          <ul className="flex gap-x-4 justify-center">
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+          </ul>
+        </nav>
+      </header>
+      <section className="h-screen 2xl:h-[80vh] 2xl:py-12 2xl:my-10 w-full flex overflow-hidden justify-between items-center py-16">
+        <section className="grid gap-8 max-w-96 text-justify">
+          <h2 className="text-4xl font-semibold">Take care of <span className="text-purple-600">yourself</span></h2>
+          <p className="leading-relaxed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolore laborum labore fugit vel quibusdam!</p>
           <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+            href=""
+            className="w-max p-2  border bg-purple-600 text-white font-medium"
+          >Get more details</a>
+        </section>
+        <section className="w-max flex object-cover h-full grayscale object-center rounded-xl hover:grayscale-0 transition-all">
+          {/*<img className="w-full" src="./../../runningwomen.jpg" alt="" />*/}
+          <img className="flex rounded-l-full rounded-r-lg shadow-xl" src="./../../gymwomen.svg" alt="" />
+        </section>
+      </section>
+      <section className="grid gap-8 py-8">
+        <section className="grid justify-items-center gap-y-8 text-center">
+          <h3 className="text-2xl font-semibold">Our Services</h3>
+          <span className="max-w-[70vw]">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta dignissimos molestiae illum sit adipisci atque nostrum temporibus perspiciatis, ipsa accusamus!</span>
+        </section>
+        <section className="grid grid-cols-2 gap-2 max-w-4xl 2xl:max-w-7xl 2xl:grid-cols-4">
+          <div className="bg-purple-700 p-4 rounded-md shadow-md">
+            <div className='flex items-center gap-x-2'>
+              <Utensils size={48} className='text-purple-400 p-1' />
+              <h3 className="text-2xl font-semibold text-purple-50">Nutrition</h3>
+            </div>
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+            <p className="text-justify pt-4 text-purple-200 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla commodi eum dolore ipsa perspiciatis.</p>
+          </div>
+          <div className="bg-purple-700 p-4 rounded-md shadow-md">
+            <div className='flex items-center gap-x-2'>
+              <Dumbbell size={48} className='text-purple-400 p-1' />
+              <h3 className="text-2xl font-semibold text-purple-50">Fitness</h3>
+            </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+            <p className="text-justify pt-4 text-purple-200 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla commodi eum dolore ipsa perspiciatis.</p>
+          </div>
+          <div className="bg-purple-700 p-4 rounded-md shadow-md">
+            <div className='flex items-center gap-x-2'>
+              <Smile size={48} className='text-purple-400 p-1' />
+              <h3 className="text-2xl font-semibold text-purple-50">Physicology Health</h3>
+            </div>
+            <p className="text-justify pt-4 text-purple-200 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla commodi eum dolore ipsa perspiciatis.</p>
+          </div>
+          <div className="bg-purple-700 p-4 rounded-md shadow-md">
+            <div className='flex items-center gap-x-2'>
+              <BrainCircuit size={48} className='text-purple-400 p-1' />
+              <h3 className="text-2xl font-semibold text-purple-50">Mental Health</h3>
+            </div>
+            <p className="text-justify pt-4 text-purple-200 ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis nulla commodi eum dolore ipsa perspiciatis.</p>
+          </div>
+        </section>
+      </section >
     </main>
   );
 }
