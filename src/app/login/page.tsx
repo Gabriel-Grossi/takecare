@@ -1,5 +1,6 @@
 'use client'
 import { LogIn } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { FormEvent, useState } from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -7,11 +8,13 @@ import 'react-toastify/dist/ReactToastify.css';
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
+    const router = useRouter()
 
     async function authenticateUser(e: FormEvent) {
         e.preventDefault()
         if (email == 'teste@teste.com') {
-            toast.dark('Deu certo')
+            toast.dark('Login efetuado com sucesso')
+            router.push('/mainmenu')
         }
     }
     return (
